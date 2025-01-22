@@ -1,25 +1,26 @@
+@use 'variables';
 // @Override : default scale-line style from ol
 body .ol-scale-line {
-    border-radius: $border-radius;
+    border-radius: variables.$border-radius;
     left: 50%;
     transform: translateX(-50%);
-    background-color: $background-theme-light;
+    background-color: variables.$background-theme-light;
     padding: .5rem;
-    box-shadow: $box-shadow-mid;
+    box-shadow: variables.$box-shadow-mid;
 
     &-inner {
         border-width: 2px;
         padding-bottom: 4px;
-        border-color: $background-theme-dark;
-        color: $background-theme-dark;
+        border-color: variables.$background-theme-dark;
+        color: variables.$background-theme-dark;
     }
 }
 
 body.oltb-dark .ol-scale-line {
-    background-color: $background-theme-dark;
+    background-color: variables.$background-theme-dark;
 
     &-inner {
-        border-color: $background-theme-light;
-        color: $color-light;
+        border-color: variables.$background-theme-light;
+        color: variables.$color-light;
     }
 }

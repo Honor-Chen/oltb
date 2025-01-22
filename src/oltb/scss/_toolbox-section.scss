@@ -1,3 +1,5 @@
+@use 'variables';
+
 .oltb-toolbox-section {
     margin: 1rem 0;
     display: none;
@@ -19,7 +21,7 @@
     }
 
     &__title {
-        color: $color-dark;
+        color: variables.$color-dark;
         margin: 0;
     }
 
@@ -85,7 +87,7 @@
 
 body.oltb-dark .oltb-toolbox-section {
     &__title {
-        color: $color-light;
+        color: variables.$color-light;
     }
     
     &__icon {

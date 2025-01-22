@@ -1,35 +1,36 @@
+@use 'variables';
 .oltb-color-input {
     display: block;
     width: 100%;
     padding: .438rem;
-    color: $color-gray-500;
-    background-color: $color-gray-100;
+    color: variables.$color-gray-500;
+    background-color: variables.$color-gray-100;
     background-clip: padding-box;
-    border: 1px solid $form-input-border-color-light;
+    border: 1px solid variables.$form-input-border-color-light;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border-radius: $border-radius;
+    border-radius: variables.$border-radius;
     transition: border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
     outline: none;
 
     &:focus {
-        border: 1px solid rgba($color-blue-300, .5);
-        box-shadow: 0 0 0 $shadow-focus-width rgba($color-blue-300, .3);
+        border: 1px solid rgba(variables.$color-blue-300, .5);
+        box-shadow: 0 0 0 variables.$shadow-focus-width rgba(variables.$color-blue-300, .3);
     }
 
     &__inner {
         padding: .5rem;
         border: 1px solid rgba(0, 0, 0, .2);
-        border-radius: $border-radius;
+        border-radius: variables.$border-radius;
     }
 }
 
 body.oltb-dark .oltb-color-input {
-    background-color: $color-gray-300;
-    border: 1px solid $form-input-border-color-dark;
+    background-color: variables.$color-gray-300;
+    border: 1px solid variables.$form-input-border-color-dark;
 
     &:focus {
-        box-shadow: 0 0 0 $shadow-focus-width rgba($color-gray-300, .5);
+        box-shadow: 0 0 0 variables.$shadow-focus-width rgba(variables.$color-gray-300, .5);
     }
 }

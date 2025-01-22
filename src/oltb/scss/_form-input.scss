@@ -1,3 +1,4 @@
+@use 'variables';
 .oltb-input {
     display: block;
     width: 100%;
@@ -6,24 +7,24 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: $color-gray-500;
+    color: variables.$color-gray-500;
     background-clip: padding-box;
-    background-color: $color-gray-100;
-    border: 1px solid $form-input-border-color-light;
+    background-color: variables.$color-gray-100;
+    border: 1px solid variables.$form-input-border-color-light;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border-radius: $border-radius;
+    border-radius: variables.$border-radius;
     transition: border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
     outline: none;
 
     &:focus {
-        border: 1px solid rgba($color-blue-300, .5);
-        box-shadow: 0 0 0 $shadow-focus-width rgba($color-blue-300, .3);
+        border: 1px solid rgba(variables.$color-blue-300, .5);
+        box-shadow: 0 0 0 variables.$shadow-focus-width rgba(variables.$color-blue-300, .3);
     }
 
     &:disabled {
-        background-color: $background-theme-light-disabled;
+        background-color: variables.$background-theme-light-disabled;
         cursor: not-allowed;
     }
 }
@@ -38,14 +39,14 @@
 }
 
 body.oltb-dark .oltb-input {
-    background-color: $color-gray-300;
-    border: 1px solid $form-input-border-color-dark;
+    background-color: variables.$color-gray-300;
+    border: 1px solid variables.$form-input-border-color-dark;
 
     &:focus {
-        box-shadow: 0 0 0 $shadow-focus-width rgba($color-gray-300, .3);
+        box-shadow: 0 0 0 variables.$shadow-focus-width rgba(variables.$color-gray-300, .3);
     }
 
     &:disabled {
-        background-color: $background-theme-dark-disabled;
+        background-color: variables.$background-theme-dark-disabled;
     }
 }

@@ -139,6 +139,7 @@ class OLTB {
     constructor(options = {}) {
         // Note: 
         // The init order is important due to dependencies between the managers
+        // * 由于管理器之间的依赖关系，初始化顺序很重要
         BootstrapManager.initAsync([
             { manager: LogManager },
             { manager: EventManager },

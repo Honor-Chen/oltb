@@ -106,6 +106,7 @@ class MyLocationTool extends BaseTool {
         return super.getName();
     }
 
+    // * 先调用父类的点击事件，再调用自定义的点击事件
     onClickTool(event) {
         super.onClickTool(event);
         this.momentaryActivation();
@@ -151,6 +152,7 @@ class MyLocationTool extends BaseTool {
     //--------------------------------------------------------------------
     // # Section: Ask User
     //--------------------------------------------------------------------
+    // * 询问是否退出全屏，确认后重新搜索定位
     askToExitFullscreen() {
         const i18n = TranslationManager.get(`${I18N__BASE}.dialogs.confirms.exitFullscreen`);
 
@@ -182,6 +184,7 @@ class MyLocationTool extends BaseTool {
     //--------------------------------------------------------------------
     // # Section: Tool DoActions
     //--------------------------------------------------------------------
+    // * 搜索到定位信息，添加 Marker 到地图，并聚焦到 Marker
     doLocationFound(location) {
         const map = this.getMap();
         if(!map) {
@@ -223,6 +226,7 @@ class MyLocationTool extends BaseTool {
         }
     }
 
+    // * 聚焦到 Marker
     doFocusMarker(map, marker, coordinates, zoom) {
         goToView({
             map: map, 
@@ -235,6 +239,7 @@ class MyLocationTool extends BaseTool {
         });
     }
 
+    // * 添加 Marker 到地图，并返回 Marker 对象
     doAddMarkerToMap(marker) {
         const layerWrapper = LayerManager.addFeatureLayer({
             name: this.options.title

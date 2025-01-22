@@ -20,7 +20,13 @@
         "url": "https://github.com/qulle/oltb/issues"
     },
     "scripts": {
+        "#": "常用命令",
         "start": "parcel serve ./dev/index.html --open --dist-dir ./serve",
+        "build": "npm run build:demo && npm run build:lib",
+        "build:lib": "rollup --config ./config/rollup.config.mjs",
+        "build:demo": "parcel build --public-url . ./dev/index.html --dist-dir ./demo",
+        "example:cdn:11": "start chrome file://%cd%/examples/cdn/example-1/index.html",
+        "##": "原有命令",
         "eslint:src": "eslint --config ./config/.eslintrc.mjs ./src/oltb/js/**/*.js",
         "eslint:src-fix": "eslint --fix --config ./config/.eslintrc.mjs ./src/oltb/js/**/*.js",
         "eslint:dev": "eslint --config ./config/.eslintrc.mjs ./dev/**/*.js",
@@ -29,9 +35,6 @@
         "test:watch": "cross-env NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 jest ./src --watch --config ./config/jest.config.mjs",
         "test:coverage": "cross-env NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 jest ./src --coverage --config ./config/jest.config.mjs",
         "test:clear": "jest --clearCache",
-        "build": "npm run build:demo && npm run build:lib",
-        "build:lib": "rollup --config ./config/rollup.config.mjs",
-        "build:demo": "parcel build --public-url . ./dev/index.html --dist-dir ./demo",
         "example:cdn:1": "sh -c 'start firefox -url \"file://C:$(cut -c3- <<< $(readlink -m ./examples/cdn/example-1/index.html))\"'",
         "example:npm:1": "parcel serve ./examples/npm/example-1/index.html --open --dist-dir ./serve",
         "example:npm:2": "parcel serve ./examples/npm/example-2/index.html --open --dist-dir ./serve",
@@ -89,6 +92,7 @@
         "process": "^0.11.10",
         "rollup": "^4.29.1",
         "rollup-plugin-license": "^3.5.3",
-        "rollup-plugin-scss": "^4.0.1"
+        "rollup-plugin-scss": "^4.0.1",
+        "svgo": "^3.3.2"
     }
 }

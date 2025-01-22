@@ -1,8 +1,9 @@
+@use 'variables';
 .oltb-overlay-tooltip {
     display: block;
-    background-color: $color-gray-400;
-    color: $color-light;
-    border-radius: $border-radius;
+    background-color: variables.$color-gray-400;
+    color: variables.$color-light;
+    border-radius: variables.$border-radius;
     -webkit-filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, .2));
     filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, .2));
     position: relative;
@@ -14,7 +15,7 @@
         bottom: 0;
         left: 50%;
         transform: translate(-50%, 100%);
-        border-top: .375rem solid $color-gray-400;
+        border-top: .375rem solid variables.$color-gray-400;
         border-right: .375rem solid transparent;
         border-left: .375rem solid transparent;
     }

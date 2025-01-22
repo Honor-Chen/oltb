@@ -1,3 +1,4 @@
+@use 'variables';
 .oltb-log {
     margin: 1rem 0;
     padding: 0 1rem 0 0;
@@ -17,7 +18,7 @@
 
     &__item {
         padding: .5rem;
-        border-radius: $border-radius;
+        border-radius: variables.$border-radius;
         margin: .5rem 0;
 
         &:first-child {
@@ -65,7 +66,7 @@
     &__json {
         padding: 1rem 0 0 0;
         margin: 0;
-        border-radius: $border-radius;
+        border-radius: variables.$border-radius;
         background-color: transparent;
         overflow: auto;
         max-height: 300px;

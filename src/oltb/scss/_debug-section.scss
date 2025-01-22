@@ -1,10 +1,12 @@
+@use 'variables';
+
 .oltb-debug {
-    border-bottom: 1px dashed $color-gray-300;
+    border-bottom: 1px dashed variables.$color-gray-300;
     padding: .5rem 0;
 
     &__commands {
         padding-bottom: 1rem;
-        border-bottom: 1px dashed $color-gray-300;
+        border-bottom: 1px dashed variables.$color-gray-300;
     }
 
     &__header {
@@ -20,14 +22,14 @@
     }
 
     &__toggle {
-        color: $color-dark;
+        color: variables.$color-dark;
     }
 
     &__json {
         padding: .5rem;
-        border-radius: $border-radius;
-        background-color: $color-gray-100;
-        border: 1px solid $color-gray-200;
+        border-radius: variables.$border-radius;
+        background-color: variables.$color-gray-100;
+        border: 1px solid variables.$color-gray-200;
         overflow: auto;
         max-height: 600px;
         font-size: 1rem;
@@ -36,10 +38,10 @@
 
 body.oltb-dark .oltb-debug {
     &__toggle {
-        color: $color-light;
+        color: variables.$color-light;
     }
 
     &__json {
-        color: $color-dark;
+        color: variables.$color-dark;
     }
 }

@@ -1,7 +1,8 @@
 // @Override : default dragzoom style from ol
+@use 'variables';
 body .ol-dragzoom {
     border-width: 2px;
     border-style: dashed;
-    border-color: $color-blue-400;
-    background-color: rgba($color-blue-200, .5);
+    border-color: variables.$color-blue-400;
+    background-color: rgba(variables.$color-blue-200, .5);
 }

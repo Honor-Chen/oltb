@@ -1,3 +1,4 @@
+@use 'variables';
 .oltb-slider {
     appearance: none;
     -webkit-appearance: none;
@@ -22,10 +23,10 @@
         width: 2rem;
         height: 2rem;
         border-radius: 50%;
-        background-color: $color-blue-300;
+        background-color: variables.$color-blue-300;
         cursor: move;
         box-shadow: 0 0 0 8px rgba(255, 255, 255, .9);
-        filter: $drop-shadow-filter-mid;
+        filter: variables.$drop-shadow-filter-mid;
         border: none;
         background-repeat: no-repeat;
         background-position: center center;
@@ -38,10 +39,10 @@
         width: 2rem;
         height: 2rem;
         border-radius: 50%;
-        background-color: $color-blue-300;
+        background-color: variables.$color-blue-300;
         cursor: move;
         box-shadow: 0 0 0 8px rgba(255, 255, 255, .9);
-        filter: $drop-shadow-filter-mid;
+        filter: variables.$drop-shadow-filter-mid;
         border: none;
         background-repeat: no-repeat;
         background-position: center center;
